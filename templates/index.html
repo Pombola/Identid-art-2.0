@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identid-Art</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+    <h1 class="titulo">IDENTIFICAÇÃO DA OBRA DE ARTE</h1>
+    <div class="principal">
+    <form method="POST" enctype="multipart/form-data">
+        <h2 class="titulo1">Enviar Imagem para Identificação:</h2>
+
+        {% if aviso %}
+        <p class="erro">{{ aviso }}</p>
+        {% endif %}
+        
+        <div class="quadrado">
+            <div class="tatu">
+                <input class="butao1" type="file" name="imagem" accept="image/*">
+                <input class="butao2" type="submit" value="Identificar">
+            </div>
+        </div>
+    </form>
+    </div>
+
+
+
+    {% if resultados %}
+    <h2>Resultados:</h2>
+    <ul>
+        {% for resultado in resultados %}
+        <li>{{ resultado }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+</body>
+</html>

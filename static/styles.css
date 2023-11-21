@@ -99,3 +99,17 @@ body{
     padding: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.titulo2{
+    padding-left: 462px;
+}
+
+.des{
+    float: right; 
+    margin-top: 25px;
+    margin-left: 735px;
+    text-align: justify;
+    background-color: rgba(0,0,0, 0.2);
+    color: white;
+    border-radius: 10px;
+}

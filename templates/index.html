@@ -16,7 +16,16 @@
         {% if aviso %}
         <p class="erro">{{ aviso }}</p>
         {% endif %}
-        
+
+        {% if resultados %}
+        <h2 class="titulo2">Resultados:</h2>
+        <ul class="des">
+             {% for resultado in resultados %}
+             <li>{{ resultado }}</li>
+            {% endfor %}
+        </ul>
+         {% endif %}
+
         <div class="quadrado">
             <div class="tatu">
                 <input class="butao1" type="file" name="imagem" accept="image/*">
@@ -25,17 +34,5 @@
         </div>
     </form>
     </div>
-
-
-
-    {% if resultados %}
-    <h2>Resultados:</h2>
-    <ul>
-        {% for resultado in resultados %}
-        <li>{{ resultado }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-
 </body>
 </html>
